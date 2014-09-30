@@ -1,0 +1,35 @@
+[idlebot]
+# server hostname
+host = 1.2.3.4
+
+# server query port
+port = 10011
+
+# virtual server ID
+virtual_server = 1
+
+# queryadmin username
+admin_username = serveradmin
+
+# queryadmin password
+admin_password = passwordgoeshere
+
+# client nickname to set on connection
+client_nickname = idlebot
+
+# afk threshold in seconds (1200 = 20 minutes, 3600 = 1 hour)
+afk_timeout_seconds = 1200
+
+# channel ID that you want idlers to be moved to
+target_channel_id = 16
+
+# comma-separated list of channel IDs to ignore
+afk_channel_ids = 16,21,34
+
+# message to display on movement for AFK
+# you can use the special variable %time% here, which will be converted to a representation
+# of the idle time you've set as a string - e.g. 1200 becomes "20 minutes" with %time%
+afk_plaintext_message = You have been idle for %time%, so I'm moving you to the AFK channel.
+
+# debug output? 1 = yes, 0 = no
+debug = 0
