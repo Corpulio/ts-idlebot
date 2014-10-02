@@ -38,7 +38,7 @@ defined_afk_threshold_ms = c.getint('idlebot', 'afk_timeout_seconds') * 1000
 target_afk_channel = c.getint('idlebot', 'target_channel_id')
 afk_plaintext_message = c.get('idlebot', 'afk_plaintext_message')
 afk_movement_message = re.sub(' ', '\\\s', re.sub('%time%', sec2hm(c.getint('idlebot', 'afk_timeout_seconds')), c.get('idlebot', 'afk_plaintext_message')))
-afk_channel_ids = [id for id in c.get('idlebot', 'afk_channel_ids')]
+afk_channel_ids = [id for id in c.get('idlebot', 'afk_channel_ids').split(',')]
 debug = True if c.getint('idlebot', 'debug') == 1 else False
 
 def _readsocket(socket):
